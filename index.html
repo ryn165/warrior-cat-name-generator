@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.4/css/bulma.css">
+</head>
+<body>
+    <div class="container">
+        <section class="hero is-primary">
+          <div class="hero-body">
+            <div class="container">
+              <h1 class="title">
+                Warrior Cat Name Generator
+              </h1>
+              <h2 class="subtitle">
+                This is awesome!
+              </h2>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+            <form>
+                <div class="field">
+                  <label class="label">First Name</label>
+                  <div class="control">
+                    <input id="first-name" class="input" type="text" placeholder="Jane">
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label class="label">Last Name</label>
+                  <div class="control">
+                    <input id="last-name" class="input" type="text" placeholder="Smith">
+                  </div>
+                </div>
+
+                <div class="control">
+                    <button class="button is-primary">Generate</button>
+                </div>
+            </form>
+
+        </section>
+    </div>
+
+    <script>
+        const catFirstName = {
+            'A' : 'Apple',
+            'B' : 'Bananna',
+            'C' : 'Cannable',
+            'J' : 'Jelly',
+            'K' : 'Killer'
+        };
+
+        const catLastName = {
+            'F' : 'Fluffy',
+            'V' : 'Victory'
+        };
+
+        const generator = document.querySelector('form');
+
+        generator.addEventListener('submit', generate);
+
+        function generate(e) {
+            e.preventDefault();
+
+            let firstName = document.querySelector('#first-name').value;
+            let lastName = document.querySelector('#last-name').value;
+
+            const firstInitial = firstName.substring(0, 1);
+            const lastInitial = lastName.substring(0, 1);
+
+            alert('Your warrior cat name is ' + catFirstName[firstInitial] + ' ' + catLastName[lastInitial]);
+
+            document.querySelector('#first-name').value = '';
+            document.querySelector('#last-name').value = '';
+        }
+    </script>
+</body>
+</html>
