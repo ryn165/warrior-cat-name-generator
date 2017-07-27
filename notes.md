@@ -2,6 +2,9 @@
 
 - Generate warrior cat name
 
+- Set up one to many mapping for names i.e. a = ['apple', 'ardvard', 'asshat'];
+- Avoid duplicate names, i.e. 'Cloud Cloud'.
+
 - Generate warror cat physical attributes (fur color, eye color, marks/scars, gender)
 - Generate clan name
 
@@ -27,6 +30,8 @@ look up cat last name based on users last initial
 
 
 ## TODO
-Add validation on name fields.
-Set up one to many mapping for names i.e. a = ['apple', 'ardvard', 'asshat'];
-Extract generate to its own function.
+
+add names for all letters
+then Launch!
+
+
