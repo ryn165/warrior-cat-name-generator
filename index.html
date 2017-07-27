@@ -45,39 +45,6 @@
         </section>
     </div>
 
-    <script>
-        const catFirstName = {
-            'A' : 'Apple',
-            'B' : 'Bananna',
-            'C' : 'Cannable',
-            'D' : 'Dawn',
-            'J' : 'Jelly',
-            'K' : 'Killer'
-        };
-
-        const catLastName = {
-            'F' : 'Fluffy',
-            'V' : 'Victory'
-        };
-
-        const generator = document.querySelector('form');
-
-        generator.addEventListener('submit', generate);
-
-        function generate(e) {
-            e.preventDefault();
-
-            let firstName = document.querySelector('#first-name').value;
-            let lastName = document.querySelector('#last-name').value;
-
-            const firstInitial = firstName.substring(0, 1);
-            const lastInitial = lastName.substring(0, 1);
-
-            alert('Your warrior cat name is ' + catFirstName[firstInitial] + ' ' + catLastName[lastInitial]);
-
-            document.querySelector('#first-name').value = '';
-            document.querySelector('#last-name').value = '';
-        }
-    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>
