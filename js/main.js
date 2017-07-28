@@ -71,7 +71,7 @@ function generate(e) {
     const firstInitial = firstName.substring(0, 1).toUpperCase();
     const lastInitial = lastName.substring(0, 1).toUpperCase();
 
-    alert('Your warrior cat name is ' + catFirstName[firstInitial] + ' ' + catLastName[lastInitial]);
+    alert('Your warrior cat name is ' + catFirstName[firstInitial] + catLastName[lastInitial]);
 
     document.querySelector('#first-name').value = '';
     document.querySelector('#last-name').value = '';
