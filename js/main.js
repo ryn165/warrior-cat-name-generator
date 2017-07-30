@@ -60,7 +60,15 @@ const catLastName = {
 
 const generator = document.querySelector('form');
 
+const modal = document.querySelector('.modal');
+const modalClose = document.querySelector('.modal-close');
+const modalText = document.querySelector('#generated-output');
+
 generator.addEventListener('submit', generate);
+
+modalClose.addEventListener('click', function() {
+    modal.classList.remove('is-active');
+});
 
 function generate(e) {
     e.preventDefault();
@@ -71,7 +79,9 @@ function generate(e) {
     const firstInitial = firstName.substring(0, 1).toUpperCase();
     const lastInitial = lastName.substring(0, 1).toUpperCase();
 
-    alert('Your warrior cat name is ' + catFirstName[firstInitial] + catLastName[lastInitial]);
+    modalText.innerHTML = 'Your warrior cat name is ' + catFirstName[firstInitial] + catLastName[lastInitial];
+
+    modal.classList.add('is-active');
 
     document.querySelector('#first-name').value = '';
     document.querySelector('#last-name').value = '';
