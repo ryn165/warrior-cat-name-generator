@@ -74,13 +74,22 @@ function generate(e) {
     let firstName = document.querySelector('#first-name').value;
     let lastName = document.querySelector('#last-name').value;
 
-    const firstInitial = firstName.substring(0, 1).toUpperCase();
-    const lastInitial = lastName.substring(0, 1).toUpperCase();
-
-    modalText.innerHTML = 'Your warrior cat name is ' + catFirstName[firstInitial][Math.floor(Math.random() * catFirstName[firstInitial].length) ] + catLastName[lastInitial][Math.floor(Math.random() * catLastName[lastInitial].length) ];
+    modalText.innerHTML = 'Your warrior cat name is ' + generateCatFirstName(firstName) + generateCatLastName(lastName);
 
     modal.classList.add('is-active');
 
     document.querySelector('#first-name').value = '';
     document.querySelector('#last-name').value = '';
+}
+
+function generateCatFirstName(firstName) {
+    const initial = firstName.substring(0, 1).toUpperCase();
+
+    return catFirstName[initial][Math.floor(Math.random() * catFirstName[initial].length)];
+}
+
+function generateCatLastName(lastName) {
+    const initial = lastName.substring(0, 1).toUpperCase();
+
+    return catLastName[initial][Math.floor(Math.random() * catLastName[initial].length)];
 }
