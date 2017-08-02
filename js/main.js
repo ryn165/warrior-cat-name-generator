@@ -30,7 +30,7 @@ const catFirstName = {
 const catLastName = {
     'A' : ['leaf'],
     'B' : ['berry'],
-    'C' : ['cloud'],
+    'C' : ['creek', 'cloud'],
     'D' : ['dusk'],
     'E' : ['echo'],
     'F' : ['moon', 'fish', 'fin'],
@@ -74,7 +74,14 @@ function generate(e) {
     let firstName = document.querySelector('#first-name').value;
     let lastName = document.querySelector('#last-name').value;
 
-    modalText.innerHTML = 'Your warrior cat name is ' + generateCatFirstName(firstName) + generateCatLastName(lastName);
+    const generatedCatFirstName = generateCatFirstName(firstName);
+    const generatedCatLastName = generateCatLastName(lastName);
+
+    while (generatedCatFirstName.toLowerCase() == generatedCatLastName.toLowerCase()) {
+        generatedCatLastName = generateCatLastName(lastName);
+    }
+
+    modalText.innerHTML = 'Your warrior cat name is ' + generatedCatFirstName + generatedCatLastName;
 
     modal.classList.add('is-active');
 
