@@ -56,6 +56,11 @@ const catLastName = {
     'Z' : ['tuft'],
 };
 
+const furColors = {
+    'Green' : 'Brown',
+    'Blue' : 'Black',
+}
+
 const generator = document.querySelector('form');
 
 const modal = document.querySelector('.modal');
@@ -74,22 +79,25 @@ function generate(e) {
     let firstName = document.querySelector('#first-name').value;
     let lastName = document.querySelector('#last-name').value;
     let age = document.querySelector('#age').value;
+    let favColor = document.querySelector('#fav-color').value;
 
     const generatedCatFirstName = generateCatFirstName(firstName);
     const generatedCatLastName = generateCatLastName(lastName);
     const generatedCatGender = generateCatGender(age);
+    const generatedFurColor = generateFurColor(favColor);
 
     while (generatedCatFirstName.toLowerCase() == generatedCatLastName.toLowerCase()) {
         generatedCatLastName = generateCatLastName(lastName);
     }
 
-    modalText.innerHTML = 'Your warrior cat name is ' + generatedCatFirstName + generatedCatLastName + '<br>Your gender is ' + generatedCatGender;
+    modalText.innerHTML = 'Your warrior cat name is ' + generatedCatFirstName + generatedCatLastName + '<br>Your gender is ' + generatedCatGender + '<br>Your fur color is ' + generatedFurColor;
 
     modal.classList.add('is-active');
 
     document.querySelector('#first-name').value = '';
     document.querySelector('#last-name').value = '';
     document.querySelector('#age').value = '';
+    document.querySelector('#fav-color').value = '';
 }
 
 function generateCatFirstName(firstName) {
@@ -110,4 +118,8 @@ function generateCatGender(age) {
     }
 
     return 'Male';
+}
+
+function generateFurColor(favColor) {
+    return furColors[favColor];
 }
