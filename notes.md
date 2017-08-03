@@ -30,3 +30,6 @@
 - https://www.wattpad.com/33322306-warrior-cat-name-generator-warrior-medicine-cat/page/2
     - Just a list of names.
 
+## Deploy
+Live site: http://warrior-cat-name-generator.herokuapp.com
+Command to deploy: `git push heroku master`
