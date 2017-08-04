@@ -87,11 +87,11 @@ function generate(e) {
     let favColor = document.querySelector('#fav-color').value;
     let leastFavColor = document.querySelector('#least-fav-color').value;
 
-    const generatedCatFirstName = generateCatFirstName(firstName);
-    const generatedCatLastName = generateCatLastName(lastName);
-    const generatedCatGender = generateCatGender(age);
-    const generatedFurColor = generateFurColor(favColor);
-    const generatedEyeColor = generateEyeColor(leastFavColor);
+    let generatedCatFirstName = generateCatFirstName(firstName);
+    let generatedCatLastName = generateCatLastName(lastName);
+    let generatedCatGender = generateCatGender(age);
+    let generatedFurColor = generateFurColor(favColor);
+    let generatedEyeColor = generateEyeColor(leastFavColor);
 
     while (generatedCatFirstName.toLowerCase() == generatedCatLastName.toLowerCase()) {
         generatedCatLastName = generateCatLastName(lastName);

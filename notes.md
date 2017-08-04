@@ -2,16 +2,8 @@
 
 - Generate warror cat physical attributes (
     - gender [Done]
-    - fur color
-form field to ask for their favorite color
-add a function to add a fur color
-add the generated fur color to the output
-
-    - eye color
-form field to ask for their least favorite color
-add a function to add a eye color
-add the generated eye color to the output
-
+    - fur color [Done]
+    - eye color [Done]
     - marks/scars
 )
 
@@ -44,5 +36,9 @@ Black = #070707
     - Just a list of names.
 
 ## Deploy
+Live site: https://ryn165.github.io/warrior-cat-name-generator/index.html
+Command to deploy: `git push origin master`
+
+Old Site:
 Live site: http://warrior-cat-name-generator.herokuapp.com
 Command to deploy: `git push heroku master`
