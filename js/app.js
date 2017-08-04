@@ -1,7 +1,7 @@
 const catFirstName = {
     'A' : ['Apple', 'Wheat', 'Air'],
     'B' : ['Berry', 'Bear', 'Bounce'],
-    'C' : ['Creek'],
+    'C' : ['Creek', 'Crow'],
     'D' : ['Dawn'],
     'E' : ['Eel'],
     'F' : ['Falcon'],
