@@ -76,8 +76,8 @@ module.exports = __webpack_require__(2);
 /***/ (function(module, exports) {
 
 var catFirstName = {
-    'A': ['Apple'],
-    'B': ['Berry'],
+    'A': ['Apple', 'Wheat', 'Air'],
+    'B': ['Berry', 'Bear', 'Bounce'],
     'C': ['Creek'],
     'D': ['Dawn'],
     'E': ['Eel'],
@@ -181,8 +181,8 @@ function generate(e) {
     document.querySelector('#first-name').value = '';
     document.querySelector('#last-name').value = '';
     document.querySelector('#age').value = '';
-    document.querySelector('#fav-color').value = '';
-    document.querySelector('#least-fav-color').value = '';
+    document.querySelector('#fav-color').value = 'Select Favorite Color';
+    document.querySelector('#least-fav-color').value = 'Select Least Favorite Color';
 }
 
 function generateCatFirstName(firstName) {
