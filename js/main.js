@@ -57,8 +57,13 @@ const catLastName = {
 };
 
 const furColors = {
-    'Green' : 'Brown',
-    'Blue' : 'Black',
+    'green' : 'Silver',
+    'blue' : 'Black',
+};
+
+const eyeColors = {
+    'yellow' : 'Amber',
+    'red' : 'Green',
 }
 
 const generator = document.querySelector('form');
@@ -80,17 +85,19 @@ function generate(e) {
     let lastName = document.querySelector('#last-name').value;
     let age = document.querySelector('#age').value;
     let favColor = document.querySelector('#fav-color').value;
+    let leastFavColor = document.querySelector('#least-fav-color').value;
 
     const generatedCatFirstName = generateCatFirstName(firstName);
     const generatedCatLastName = generateCatLastName(lastName);
     const generatedCatGender = generateCatGender(age);
     const generatedFurColor = generateFurColor(favColor);
+    const generatedEyeColor = generateEyeColor(leastFavColor);
 
     while (generatedCatFirstName.toLowerCase() == generatedCatLastName.toLowerCase()) {
         generatedCatLastName = generateCatLastName(lastName);
     }
 
-    modalText.innerHTML = 'Your warrior cat name is ' + generatedCatFirstName + generatedCatLastName + '<br>Your gender is ' + generatedCatGender + '<br>Your fur color is ' + generatedFurColor;
+    modalText.innerHTML = 'Your warrior cat name is ' + generatedCatFirstName + generatedCatLastName + '<br>Your gender is ' + generatedCatGender + '<br>Your fur color is ' + generatedFurColor + '<br>Your eye color is ' + generatedEyeColor;
 
     modal.classList.add('is-active');
 
@@ -98,6 +105,8 @@ function generate(e) {
     document.querySelector('#last-name').value = '';
     document.querySelector('#age').value = '';
     document.querySelector('#fav-color').value = '';
+    document.querySelector('#least-fav-color').value = '';
+
 }
 
 function generateCatFirstName(firstName) {
@@ -121,5 +130,9 @@ function generateCatGender(age) {
 }
 
 function generateFurColor(favColor) {
-    return furColors[favColor];
+    return furColors[favColor.toLowerCase()];
+}
+
+function generateEyeColor(leastFavColor) {
+    return eyeColors[leastFavColor.toLowerCase()];
 }
