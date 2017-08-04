@@ -36,5 +36,9 @@ Black = #070707
     - Just a list of names.
 
 ## Deploy
+Live site: https://ryn165.github.io/warrior-cat-name-generator/index.html
+Command to deploy: `git push origin master`
+
+Old Site:
 Live site: http://warrior-cat-name-generator.herokuapp.com
 Command to deploy: `git push heroku master`
