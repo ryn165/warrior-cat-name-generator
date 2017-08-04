@@ -97,7 +97,11 @@ function generate(e) {
         generatedCatLastName = generateCatLastName(lastName);
     }
 
-    modalText.innerHTML = 'Your warrior cat name is ' + generatedCatFirstName + generatedCatLastName + '<br>Your gender is ' + generatedCatGender + '<br>Your fur color is ' + generatedFurColor + '<br>Your eye color is ' + generatedEyeColor;
+    modalText.innerHTML =
+    `Your warrior cat name is ${generatedCatFirstName}${generatedCatLastName}
+     <br>Your gender is ${generatedCatGender}
+     <br>Your fur color is ${generatedFurColor}
+     <br>Your eye color is ${generatedEyeColor}`;
 
     modal.classList.add('is-active');
 
