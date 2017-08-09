@@ -1,4 +1,4 @@
-# warrior-cat-name-generator
+# Warrior Cat Name Generator
 
 ** Currently in development, check back often for updates and new features **
 
@@ -10,7 +10,7 @@
 
 ## Deployment
 
-This generator is hosted on github pages. Pushing new commits to the master branch will update the live site.
+This generator is hosted on github pages. Pushing new commits to the master branch will update the live site. `https://ryn165.github.io/warrior-cat-name-generator/`
 
 While pushing the dev compiled assets will work, compiling for production will minify and uglify the css and js files.
 
