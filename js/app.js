@@ -28,7 +28,7 @@ const catFirstName = {
 };
 
 const catLastName = {
-    'A' : ['leaf', 'soar', 'stream'],
+    'A' : ['stream', 'leaf', 'soar'],
     'B' : ['berry', 'fire', 'heart'],
     'C' : ['blaze', 'cloud', 'talons'],
     'D' : ['dusk', 'dawn', 'mist'],
