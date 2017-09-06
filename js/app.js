@@ -62,7 +62,7 @@ const furColors = {
     'yellow' : 'White',
     'green' : 'Silver',
     'blue' : 'Grey',
-    'purple' : 'Auburn'
+    'purple' : 'Auburn',
     'black' : 'Black',
     'brown' : 'Ginger',
     'white' : 'Tawny',
